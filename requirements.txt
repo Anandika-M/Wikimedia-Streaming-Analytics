@@ -1,0 +1,46 @@
+# requirements.txt
+# Wikipedia Live Edit Analytics Pipeline
+# Install with: pip install -r requirements.txt
+#
+# Project components covered:
+#   wikimedia_kafka_producer.py  - SSE stream to Kafka
+#   step1_producer.py            - simple Kafka producer
+#   step2_spark_streaming.py     - Spark streaming + Cassandra write
+#   step3_ml.py                  - Spark MLlib models
+#   step3_ml_sklearn.py          - scikit-learn models + plots
+#   setup_cassandra.py           - Cassandra keyspace setup
+#   queries.py                   - 12 static Cassandra queries
+#   app.py                       - consolidated Streamlit dashboard
+#   schema.py                    - Spark schema definitions
+#   config.py                    - central config
+
+# ── Kafka ─────────────────────────────────────────────────
+kafka-python==2.0.2
+
+# ── Wikimedia SSE stream ──────────────────────────────────
+sseclient-py==1.8.0
+requests==2.32.3
+
+# ── Spark (must match your local Spark installation) ──────
+# Spark 4.1.1 is installed locally on your Mac
+# PySpark version must match your spark-submit version
+pyspark==4.1.1
+
+# ── Cassandra ─────────────────────────────────────────────
+cassandra-driver==3.29.3
+
+# ── Data processing ───────────────────────────────────────
+pandas==2.2.3
+numpy==1.26.4
+pyarrow==17.0.0
+
+# ── Machine learning ──────────────────────────────────────
+scikit-learn==1.5.2
+
+# ── Visualisation ─────────────────────────────────────────
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# ── Streamlit dashboard ───────────────────────────────────
+streamlit==1.39.0
+Pillow==10.4.0

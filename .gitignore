@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Data files (large - keep schema, ignore actual data)
+data/
+*.parquet
+*.csv
+*.json
+
+# ML models & plots (regenerate with step3_ml_sklearn.py)
+models/
+plots/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Cassandra snapshots
+cassandra/
+*.db
+
+# Kafka logs
+kafka-logs/
+
+# Environment variables
+.env
+*.env
