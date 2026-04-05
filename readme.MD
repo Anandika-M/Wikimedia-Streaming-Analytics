@@ -1,10 +1,10 @@
-# 🌐 Wikimedia Streaming Analytics
+#  Wikimedia Streaming Analytics
 
-A real-time big data pipeline that ingests live Wikipedia edits via the **Wikimedia SSE stream**, processes them through **Kafka → Spark Structured Streaming**, stores results in **Cassandra + Parquet**, and surfaces insights through a **dual Streamlit dashboard** backed by **scikit-learn ML models**.
+A real-time big data pipeline that ingests live Wikipedia edits via the **Wikimedia SSE stream**, processes them through **Kafka -> Spark Structured Streaming**, stores results in **Cassandra + Parquet**, and surfaces insights through a **dual Streamlit dashboard** backed by **scikit-learn ML models**.
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 Wikimedia SSE Stream
@@ -181,11 +181,11 @@ CASSANDRA_KS   = "wikipedia"
 
 | Metric | Source |
 |---|---|
-| AUC-ROC (best classifier) | `bot_metrics.pkl` → `best_auc` |
-| Silhouette Score | `anomaly_metrics.pkl` → `silhouette` |
-| Anomaly Count | `anomaly_metrics.pkl` → `anomalyCount` |
-| Cluster Profiles | `anomaly_metrics.pkl` → `clusterProfile` |
-| Top Edited Pages | `trend_metrics.pkl` → `topPages` |
+| AUC-ROC (best classifier) | `bot_metrics.pkl` -> `best_auc` |
+| Silhouette Score | `anomaly_metrics.pkl` -> `silhouette` |
+| Anomaly Count | `anomaly_metrics.pkl` -> `anomalyCount` |
+| Cluster Profiles | `anomaly_metrics.pkl` -> `clusterProfile` |
+| Top Edited Pages | `trend_metrics.pkl` -> `topPages` |
 
 ---
 
@@ -193,7 +193,7 @@ CASSANDRA_KS   = "wikipedia"
 
 | Layer | Technology |
 |---|---|
-| Ingestion | Wikimedia SSE → Kafka |
+| Ingestion | Wikimedia SSE -> Kafka |
 | Processing | Apache Spark Structured Streaming |
 | Storage | Apache Cassandra, Apache Parquet |
 | ML | scikit-learn (LR, DT, RF, KMeans, Isolation Forest) |
